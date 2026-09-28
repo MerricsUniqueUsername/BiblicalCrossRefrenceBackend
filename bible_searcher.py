@@ -1,3 +1,4 @@
+import os
 import random
 import psycopg
 import requests
@@ -18,7 +19,7 @@ BOOK_MAP = {
     "Phlm": 57, "Heb": 58, "Jas": 59, "1Pet": 60, "2Pet": 61, "1John": 62,
     "2John": 63, "3John": 64, "Jude": 65, "Rev": 66,
 }
-DB_URL = "postgresql://postgres:FGAIuYJCDJVdtVpedKLzMSrzHPjYiLuK@viaduct.proxy.rlwy.net:22906/railway"
+DB_URL = os.getenv("DB_URL")
 
 
 def get_edges_from_verse(verse_id: int) -> list[tuple[str, str]]:
