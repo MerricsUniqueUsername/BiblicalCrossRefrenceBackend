@@ -1,7 +1,7 @@
-import os
 import random
 import psycopg
 import requests
+import os
 
 BOOK_MAP = {
     # Old Testament
